@@ -19,11 +19,9 @@ function getDataFromApi(searchTerm, callback) {
 
 //What if I want to choose which element needs to display this? For example
 //function displayYTSearchData(data, element);
-//how would line 54 call this?
+//how would line 51 call this?
 function displayYTSearchData(data) {
   var resultElement = '';
-  
-  console.log(data.items);
   
   if (data.items) {
     data.items.forEach(function(item) {
@@ -44,7 +42,6 @@ function displayYTSearchData(data) {
     resultElement += '<p>No results</p>';
   }
   
-  console.log(resultElement);
   $('.search-results').html(resultElement);
 }
 
